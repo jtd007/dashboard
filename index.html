@@ -1,102 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Feedback Form</title>
 
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard</title>
-    <!--CSS CODE-->
-    <style type="text/css" media="screen">
-        /* BASIC TYPOGRAPHY */
-        html {
-            font-family: serif;
-        }
-        body {
-            line-height: 0.75;
-            color: black;
-            background-color: #f9f9f9;
-            max-width: inherit;
-            margin: 0px;
-            padding: 0 20px;
-        }
-        h1, h2, h3 {
-            font-family: verdana;
-            font-weight: 700;
-        }
-        h1 {
-            line-height: 1;
-        }
-        h2 {
-            line-height: 1.1;
-            text-indent: 0px;
-        }
-        h4 {
-            text-align: center;
-            line-height: 0;
-            font-weight: 300;
-        }
-        ul {
-            margin: 25px;
-            text-indent: 0px;
-            padding: 0em;
-        }
-        li {
-            line-height: 1.5;
-            font-size: 24px;
-        }
-        div {
-            text-indent: 0px;
-        }
-        header, footer {
-            margin: 20px; /* extra space around main */
-        }
-        main {
-            width: 66em;
-            margin: 0 auto; /* centers main */
-            max-width: 100%;
-            line-height: 1.5;
-            font-size: 20px;
-        }
-
-        /* Add some content at the bottom of the video/page */
-        .content {
-        position:relative; /* "relative" resized content. if scrollbar is needed use "fixed" */
-        background: rgba(0, 0, 0, 0.5);
-        color: #f1f1f1;
-        width: auto;
-        padding: 20px;
-        }
-
-        @media screen and (max-width: 1200px) {
-            main {font-size: 20px;}
-        }
-        @media screen and (max-width: 800px) {
-            main {font-size: 18px;}
-            li {font-size: 22px;}
-        }
-        @media screen and (max-width: 600px) {
-            main {font-size: 16px;}
-            li {font-size: 20px;}
-        }
-        /* Use a media query to add a breakpoint at 800px: */
-    </style>
-</head>
-
-
-<body>
-    <header></header>
-
-    <main>
-
-
-        <div class="content">
-            <h1>Home</h1>
-            <BR>
-            <h2>Garage</h2>   
-            <iframe width="100%" height="750" frameborder="0" class="map" src="https://circle.logi.com"></iframe>
-        </div> 
-    </main>
-    <footer></footer>
-</body>
+<h1>Feedback Form</h1>
+<form method="post" action="send_mail.php">
+<p>
+<label>First Name
+<input type="text" name="first_name" required>
+</label> 
+</p>
+<p>
+<label>Email 
+<input type="email" name="email_address">
+</label>
+</p>
+<p>
+<label>Comments
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+<p><button>Submit the form</button></p>
+</form>
 </html>
